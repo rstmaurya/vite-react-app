@@ -1,0 +1,201 @@
+[
+  {
+    "id": 1,
+    "category": "Men",
+    "title": "Rounded t-shirt",
+    "price": 750,
+    "image": "/images/menFashion.jpg",
+     "description":" ABFRL, Aditya Birla Fashion and Retail,No 10/1,ByatarayanapuraJakkur Layout,Bellary Main Road-560092,Bangalore,Karnataka,India"
+  },
+  {
+    "id": 2,
+
+    "category": "Men",
+    "title": "Stylish Shirt",
+    "price": 850,
+    "image": "/images/menFashion1.jpg",
+    "description":"product 2 "
+  },
+  {
+    "id": 3,
+
+    "category": "Men",
+    "title": "Chapri Clothes",
+    "price": 650,
+    "image": "/images/menFashion2.jpg",
+    "description":""
+
+  },
+  {
+    "id": 4,
+
+    "category": "Men",
+    "title": "Winter Hoodies",
+    "price": 950,
+    "image": "/images/menFashion3.jpg",
+    "description":""
+
+  },
+  {
+    "id": 5,
+
+    "category": "Men",
+    "title": "Classical Hoodies",
+    "price": 950,
+    "image": "/images/menFashion4.jpg",
+    "description":""
+
+  },
+  {
+   "id": 6,
+
+   "category": "Women",
+   "title": "jeans Jacket",
+   "price": 1050,
+   "image": "/images/womenFashion.jpg",
+   "description":" Shop for sweatshirts for women online on Flipkart from Metronaut, Flying Machine, GAP, Puma and Adidas among other trusted names in the business at best prices."
+
+ },
+ {
+  "id": 7,
+
+  "category": "Women",
+  "title": "Kurti",
+  "price": 450,
+  "image": "/images/womenFashion1.jpg",
+  "description":""
+
+},
+{
+ "id": 8,
+
+ "category": "Women",
+ "title": "Stylish Jackets",
+ "price": 850.50,
+ "image": "/images/oversized.webp",
+ "description":"Women Sweaters & Cardigans: Buy women sweaters & women cardigans online at Allen Solly.  "
+
+},
+{
+ "id": 9,
+
+ "category": "Women",
+ "title": "Puma Kurti",
+ "price": 2250.78,
+ "image": "/images/womenFashion2.jpg",
+ "description":"Crew neck with an attached hood Adjustable hood with drawcord Pullover style A regular fit with long sleeves A spacious kangaroo pocket on the front "
+
+},
+{
+ "id":10,
+
+ "category": "Women",
+ "title": "Tops!!",
+ "price": 1850.50,
+ "image": "/images/womenFashion3.jpg",
+ "description":"Buy Latest Women Sweatshirts online at the lowest price in India. Pick from top original brands like Roadster, Belle Felle, max, DressBerry & more "
+
+},
+{
+ "id":11,
+
+ "category": "Electronics",
+ "title": "One plus+",
+ "price": 27500,
+ "image": "/images/mob1.webp",
+ "description":""
+
+},
+{
+ "id": 12,
+
+ "category": "Electronics",
+ "title": "S23 ultra",
+ "price": 121000,
+ "image": "/images/mob2.jpg",
+ "description":""
+
+},
+{
+ "id":13,
+
+ "category": "Electronics",
+ "title": "Speaker",
+ "price": 2350,
+ "image": "/images/speaker2.webp",
+ "description":"It delivers a powerful 14W stereo sound for a complete immersive experience. Stone 1200 provides a battery time of upto 9 hours without its RGB LEDs and upto 7 hours with it(@60% volume) with a charging time of upto 4 hours."
+
+},
+{
+ "id":14,
+
+ "category": "Electronics",
+ "title": "Earphone",
+ "price": 1250,
+ "image": "/images/boat2.jpg",
+ "description":""
+
+},
+{
+ "id":15,
+
+ "category": "Electronics",
+ "title": " Canon Camera",
+ "price": 32250,
+ "image":"/images/camera.webp",
+ "description":"There is a range of Canon cameras available online such as Canon EOS 3000D DSLR Camera 1 Camera Body-18-55 mm Lens, Canon EOS 1500D DSLR Camera Body"
+
+},
+{
+ "id":16,
+
+ "category": "Kids",
+ "title": "kids hoodie",
+ "price": 1250,
+ "image":"/images/kidsFashion.jpg",
+ "description":" Printed Cotton Blend Hoodie Sweatshirt For Boys - Pack of 2 · T2F · Boys Cotton Hooded Neck Sweatshirt · T2F · Unisex-Child Cotton Hooded "
+
+},
+{
+ "id":17,
+
+ "category": "Kids",
+ "title": "kids frok",
+ "price": 550,
+ "image":"/images/kidsFashion1.jpg",
+ "description":""
+
+},
+{
+ "id":18,
+
+ "category": "Kids",
+ "title": " Toddlers clothes",
+ "price": 1199.75,
+ "image":"/images/kidsFashion2.jpg",
+ "description":""
+
+},
+{
+ "id":19,
+
+ "category": "Kids",
+ "title": "Spider man ",
+ "price": 999,
+ "image":"/images/kidsFashion3.jpeg",
+ "description":""
+
+},
+{
+ "id":20,
+
+ "category": "Kids",
+ "title": "Gif.. ",
+ "price":"--",
+ "image":"/images/girl.gif",
+ "description":""
+
+}
+
+
+]

@@ -1,0 +1,167 @@
+/* .active {
+ background-color: chocolate;
+ color: red;
+ padding:6px;
+ border-top-left-radius: 10px;
+ 
+ 
+ } */
+ *, *::before, *::after {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+  .borderClass{
+    box-shadow: 3px 2px 7px rgba(0, 0, 0, .4);
+  }
+
+
+
+ .timers{
+  color:rgb(255, 255, 255);
+  font-size:3rem;
+  font-weight: 900;
+  text-shadow: 4px 3px 5px rgb(234, 42, 198);
+  background-color:rgb(145, 210, 210);
+  width: 100%;
+  padding: 10px;
+  line-height: 100px;
+  border-radius: 8px;
+  box-shadow: 5px 4px 10px rgb(20, 21, 20);
+ }
+
+ .bg-section{
+      background-image: url('https://www.the365people.com/hubfs/Website%20Assets/Texture%20and%20Patterns/dark-blue-pattern.png');
+      background-position: center;
+      background-color: brown;
+      min-height: 50vh;
+ }
+ .img-trans img{
+  box-shadow: 0 8px 16px rgba(0, 0, 10, 0.8);
+  transition: opacity 0.9s ease-in-out;
+  border-radius:10px;
+  padding: 3px;
+ }
+  
+  
+  .img-trans{
+    margin-top: 50px;
+  }
+  .p-fontsize p{
+     font-size: 18px;
+  }
+  .p-fontsize button{
+    font-size: 24px;
+    color: rgb(244, 29, 29);
+    background-color: rgb(208, 241, 230);
+    transition: .9s ease-in ;
+    border:none;
+    padding: 12px;
+    border:outset;
+    border-top-left-radius: 20px;
+  }
+  .p-fontsize button:hover{
+    background-color: red;
+    color: white;
+  }
+
+  .p-fontsizee button{
+    font-size: 24px;
+    color: rgb(17, 17, 17);
+    transition: .7s ease-in-out ;
+    font-weight: 700;
+    border:none;
+    border-radius: 10px;
+    padding: 8px;
+  }
+  .p-fontsizee button:hover{
+    background-color: rgb(17, 206, 197);
+    color: white;
+  }
+
+  .bi-youtube:hover{
+    color: rgb(242, 17, 17);
+    transition: .4s ease-in;
+
+  }
+  .bi-linkedin:hover{
+    color: blue;
+    transition: .4s ease-in;
+  }
+
+    
+
+  /*  login page */
+  .login-style{
+    width:340px;
+    margin-top: 15px;
+    margin-left: 25px;
+    box-shadow: 0px 5px 10px rgba(231, 22, 22, 0.6);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 35px;
+    min-height:300px;
+    background-color: rgb(128, 128, 126);
+  }
+  .login-style button:hover {
+    background-color: rgb(160, 222, 227);
+    transition: .4s ease-in;
+    border:none;
+    color:black;
+    font-size: 18px;
+  
+    
+  }
+  .login-style h2{
+     background-color: rgb(241, 145, 224);
+     padding: 5px;
+     border-radius: 7px;
+     color: rgb(16, 15, 15);
+  }
+  .cursor-pointer{
+    cursor: pointer;
+    color:rgb(63, 232, 25);
+    font-size: 35px;
+    margin-left: 10px;
+  }
+
+  .card-styless{
+    width:50%;
+    min-height:44vh
+
+
+  }
+  .img-cardss img{
+    width:100% ;
+    height:303px
+  }
+
+
+  
+
+  /* @Media  queries.. for responsive style*/
+
+  @media screen and (max-width: 576px)  {
+
+    .borderClass{
+        margin-top:40px !important;
+        background-color: pink;
+        
+    }
+    .card-styless{
+      width:90% !important;
+      min-height:44vh;
+      padding:2px;
+  
+  
+    }
+
+    .img-cardss img{
+      width:100% ;
+      height:250px;
+      object-fit:fill
+
+    }
+
+  
+
+  }
