@@ -52,7 +52,6 @@ const Calculator = () => {
       </div>
     </div>
     <hr/>
-H<span className='align-text-top'>2</span>O
 
     </>
   );
