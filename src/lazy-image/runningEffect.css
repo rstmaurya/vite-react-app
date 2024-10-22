@@ -1,0 +1,30 @@
+/* App.css */
+.mains {
+ font-size: 35px;
+ width: 400px;
+ margin: 20px;
+ color: rgb(9, 9, 138);
+ font-weight:600;
+ text-align: center;
+ 
+}
+
+.mains span {
+ font-weight: 900;
+ color: rgb(133, 6, 135);
+}
+
+#element {
+ color: rgb(13, 13, 237);
+ font-weight: 700;
+ font-size: 38px;
+ 
+}
+
+body {
+ background-color: rgb(161, 161, 232);
+ height: 80vh;
+ display: flex;
+ justify-content: start;
+ align-items: center;
+}

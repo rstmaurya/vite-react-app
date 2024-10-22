@@ -17,12 +17,13 @@ import WithoutContextCounter from './Context-demo/WithoutContextCounter.jsx'
 import ContextCounter from './Context-demo/ContextCounter.jsx'
 import ContextDemo from './Context-demo/ContextDemo.jsx'
 import Calculator from './Calculator/Calculator.jsx'
+import RunningEffects from './lazy-image/RunningEffects.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <CookiesProvider>
 <BrowserRouter>
-<Calculator />
+<RunningEffects />
 </BrowserRouter>
   </CookiesProvider>
   </StrictMode>,
