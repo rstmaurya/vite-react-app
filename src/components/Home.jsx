@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 import CalculateSI from '../lazy-image/ClaculateSi';
 import Stopwatch from '../lazy-image/Stopwatch';
+import RunningEffects from '../lazy-image/RunningEffects';
 
 const Home = () => {
 
@@ -56,7 +57,9 @@ const Home = () => {
     <>
       <div className='h1 text-center text-primary '>
         Welcome to Vite App..... <span className='text-warning bi bi-person-fill'>[{cookies['user-id']}]</span> <span onClick={handleLogOut} className='btn btn-danger'>LogOut</span>
-        
+
+        <RunningEffects/>
+
          <p className='mt-4 timers'>{time}</p>
          
           <p >{timey.toDateString()}</p>

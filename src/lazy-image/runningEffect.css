@@ -1,13 +1,17 @@
 /* App.css */
+
+
+
+
 .mains {
  font-size: 35px;
- width: 400px;
- margin: 20px;
+ margin: 25px;
  color: rgb(9, 9, 138);
  font-weight:600;
  text-align: center;
  
 }
+
 
 .mains span {
  font-weight: 900;
@@ -17,14 +21,33 @@
 #element {
  color: rgb(13, 13, 237);
  font-weight: 700;
- font-size: 38px;
+ font-size: 40px;
  
 }
 
-body {
- background-color: rgb(161, 161, 232);
- height: 80vh;
- display: flex;
- justify-content: start;
- align-items: center;
+
+
+.header img{
+ width:100%;
+ border-radius:25px;
+ filter:drop-shadow(5px 5px 15px rgb(248, 8, 232))
+
+
+}
+
+/* Responsive styling........... */
+
+@media screen and (max-width: 576px){
+
+ .mains {
+  font-size: 30px;
+  font-weight:700;
+  
+ }
+ #element {
+  color: rgb(13, 13, 237);
+  font-weight: 700;
+  font-size: 30px;
+  
+ }
 }

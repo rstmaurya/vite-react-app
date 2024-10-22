@@ -23,7 +23,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
   <CookiesProvider>
 <BrowserRouter>
-<RunningEffects />
+<App />
 </BrowserRouter>
   </CookiesProvider>
   </StrictMode>,

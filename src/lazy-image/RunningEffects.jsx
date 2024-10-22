@@ -1,7 +1,7 @@
 // TypedEffect.js
 import React, { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
-import './runningEffect.css'
+import Typed from 'typed.js';               //npm install typed.js for this library
+import './runningEffect.css';
 
 const RunningEffects = () => {
   const typedElement = useRef(null);
@@ -21,9 +21,22 @@ const RunningEffects = () => {
   }, []);
 
   return (
-    <div className="mains">
+   <div className='header container-fluid mt-4 bg-info bg-opacity-75 d-flex align-items-center' style={{height:'80vh'}}>
+    <div className="row ">
+      <div className="col-md-6">
+      <div className="mains">
       Hi, My name is <span>Rajnish</span> and I am a Passionate <span id="element" ref={typedElement}></span>
     </div>
+      </div>
+      <div className="col-md-6">
+      <div>
+      <img src='images/rajni.png' alt=""  />
+    </div>
+      </div>
+    </div>
+    
+    
+   </div>
   );
 };
 
