@@ -31,12 +31,26 @@ const Category = () => {
 }
 
 function handleRemoveClick(item){           //deleting item from cart
-  dispatch(removeFromCart(item));
-  alert('Item removed..');
+ var flag= window.confirm('Are u sure to delete?')
+  if(flag){
+    dispatch(removeFromCart(item));
+    alert('Item removed..');
+  }
+
  }
 
  function sumPrice() {                    //total cart value
-  return cartItems.reduce((acc, item) => acc + item.price, 0);
+ var total= cartItems.reduce((acc, item) => acc + item.price, 0);
+ if(total>500){
+  return `${total} (Free Delivery)`;
+
+ } else if (total==0){
+   return total;
+ }
+ else{
+  return `${total +40} (40Rs Delivery Charge below  Rs.500)`;
+
+ }
 }
 
  useEffect(()=>{
@@ -130,7 +144,7 @@ function handleRemoveClick(item){           //deleting item from cart
                 </tbody>
                 <tfoot>
                        <tr>
-                          <td colSpan='4'><span className='fw-bold'>Total:&#8377;{sumPrice().toLocaleString()} </span></td>
+                          <td colSpan='4'><span className='fw-bold p-2'>Total:&#8377;{sumPrice().toLocaleString()} </span></td>
                         </tr>
                        </tfoot>
               </table>
@@ -182,7 +196,8 @@ function handleRemoveClick(item){           //deleting item from cart
                </div>
                <div className="card-body bg-primary bg-opacity-10">
                 <img className='card-img-top  p-2' height='220px' src={item.image} alt="" />
-                <p className='mt-4'>Price:&#8377;{item.price.toLocaleString()}</p>
+                <div style={{width:'70px',height:'50px',borderRadius:'45%'}} className='position-absolute  fs-6 top-3 end-0  badge bg-danger '>{((item.oldPrice-item.price)*100/item.oldPrice).toFixed(0)}%<br/>OFF</div>
+                <p className='mt-4 fw-bold'>Price:&#8377;{item.price.toLocaleString()} <span className='text-secondary text-decoration-line-through  ms-2'>&#8377;{item.oldPrice}</span></p>
                 <div>Description:  {item.description ? item.description.slice(0,40) : <code>No description available.</code>}</div>
                 <div className='bg-info w-50 p-2 rounded fw-bold text-end' ><Link to ={`/details/${item.id}`} >See more...</Link></div>
                </div>
