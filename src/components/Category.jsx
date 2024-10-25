@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { addToCart, removeFromCart } from '../Slicer/cart-slicer'
 
 const Category = () => {
 
@@ -10,12 +12,41 @@ const Category = () => {
  const[selCategory,setSelCategory]=useState('All')
  const[search,setSearch] =useState('')
 
+ const[cart,setCart]=useState([])
+
+// fetching cartItems and cartCount data from redux
+
+ const dispatch=useDispatch()
+
+//  getting state from the store
+
+ const cartItems=useSelector((state)=>state.store.cartItems)
+ const cartCount = useSelector((state) => state.store.cartCount);
+
+ function handleAddClick(product){          //Adding item in cart
+  dispatch(addToCart(product))
+  alert(`${product.title}\nAdded to Cart`)
+
+  console.log(cartItems)
+}
+
+function handleRemoveClick(item){           //deleting item from cart
+  dispatch(removeFromCart(item));
+  alert('Item removed..');
+ }
+
+ function sumPrice() {                    //total cart value
+  return cartItems.reduce((acc, item) => acc + item.price, 0);
+}
+
  useEffect(()=>{
    axios.get('category.json').then(res=>{
     setData(res.data)
     setOriginalData(res.data)
    })
  },[])
+
+
 
  // filter by onclick the category...
 
@@ -56,12 +87,60 @@ const Category = () => {
     }
 
    },[search,originalData])
+
+ 
    
 
   return (
     <div className='container-fluid'>
       <div className="row">
-      <h2 className='text-center bg-info p-3 text-danger'>  <span className='bi bi-cart4'></span> Shopping!!!!!!!</h2>
+        <div className=' bg-info p-3 d-flex justify-content-around'>
+      <h2 className=' bg-info  text-danger'><span className='bi bi-cart4'></span> Shopping!!!!!!! </h2>
+      <button data-bs-target='#cart' data-bs-toggle='modal'  className='btn btn-warning  text-light fw-bold'>[<span>{cartCount}</span>] Items in Cart</button>
+      <div className='modal fade' id="cart">
+              <div className='modal-dialog '>
+                <div className='modal-content'>
+                  <div className='modal-header '>
+                    <h2 className='text-center'>Items In Cart</h2>
+                    <button data-bs-target="#cart" data-bs-toggle="modal" className='btn btn-close' ></button>
+                  </div>
+                  <div className="modal-body">
+              <table className="table table-hover">
+                <thead  >
+                  <tr className='table-info w-100' >
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th colSpan='2'>Preview</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {
+                     cartItems.map(item=><tr key={item.id}>
+                         <td width='250'>{item.title}</td>
+                         <td >{item.price}</td>
+                         <td>
+                          <img src={item.image} width='100' height='100'/>
+                         </td>
+                         <td>
+                          <button  onClick={()=>handleRemoveClick(item)}  className='btn btn-outline-danger'><span className='bi bi-trash-fill'></span></button>
+                         </td>
+                     </tr>)
+                  }
+                  
+                </tbody>
+                <tfoot>
+                       <tr>
+                          <td colSpan='4'><span className='fw-bold'>Total:&#8377;{sumPrice().toLocaleString()} </span></td>
+                        </tr>
+                       </tfoot>
+              </table>
+
+            </div>
+               
+                </div>
+              </div>
+             </div>
+      </div>
 
        <div className="col-md-2 d-none d-md-block">
         <h5 className=' text-success '>Filter by Category Click</h5>
@@ -90,23 +169,26 @@ const Category = () => {
           <p className='text-decoration-underline mt-2 p-2  text-info'>{search}</p>
        </div>
        <div className="col-md-8">
-            <div className=" overflow-auto d-flex p-2 flex-wrap " style={{height:'550px' }}>
+            <div className=" overflow-auto d-flex p-2 flex-wrap" style={{height:'550px' }}>
             {
              data.map(item=>
              
              
              
               <div key={item.id} className="mb-3">
-                <div className="card m-2 " style={{width:'300px'}}>
+                <div className="card m-2   " style={{width:'300px'}}>
                <div className="card-header bg-dark bg-opacity-25">
                   <h3 className='text-center text-info'>{item.title}</h3>
                </div>
                <div className="card-body bg-primary bg-opacity-10">
-                <img className='card-img-top  p-2' height='250px' src={item.image} alt="" />
+                <img className='card-img-top  p-2' height='220px' src={item.image} alt="" />
                 <p className='mt-4'>Price:&#8377;{item.price.toLocaleString()}</p>
-                <p>Description:  {item.description ? item.description.slice(0,40) : <code>No description available.</code>}</p>
-                <p className='bg-info w-50 p-2 rounded fw-bold text-end' ><Link to ={`/details/${item.id}`} >See more...</Link></p>
+                <div>Description:  {item.description ? item.description.slice(0,40) : <code>No description available.</code>}</div>
+                <div className='bg-info w-50 p-2 rounded fw-bold text-end' ><Link to ={`/details/${item.id}`} >See more...</Link></div>
                </div>
+               <div className='card-footer ' >
+            <button onClick={()=>{handleAddClick(item)}} className='bi bi-cart4 btn btn-danger w-100'>Add to Cart</button>
+           </div>
               </div>
              </div>
              

@@ -54,7 +54,7 @@ const Home = () => {
   }
 
   return (
-    <>
+    <div className=''>
       <div className='h1 text-center text-primary '>
         Welcome to Vite App..... <span className='text-warning bi bi-person-fill'>[{cookies['user-id']}]</span> <span onClick={handleLogOut} className='btn btn-danger'>LogOut</span>
 
@@ -74,7 +74,7 @@ const Home = () => {
       {/* Footer start here........... */}
 
 
-    </>
+      </div>
   )
 }
 

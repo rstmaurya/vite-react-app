@@ -86,8 +86,11 @@ function App() {
        </div>
         </nav> */}
 
-        <nav className="navbar navbar-expand-md navbar-light bg-light">
-  <div className="container-fluid bg-primary bg-opacity-50 p-1 ">
+        
+
+   <nav className="navbar  navbar-expand-md navbar-light bg-light shadow  z-3  position-sticky top-0">
+  
+  <div className="container-fluid bg-primary bg-opacity-50  p-2 ">
   <NavLink
             className={({ isActive }) =>
               isActive ? "btn btn-success fw-bold m-2" : "btn btn-warning fw-bold m-2"

@@ -18,12 +18,17 @@ import ContextCounter from './Context-demo/ContextCounter.jsx'
 import ContextDemo from './Context-demo/ContextDemo.jsx'
 import Calculator from './Calculator/Calculator.jsx'
 import RunningEffects from './lazy-image/RunningEffects.jsx'
+import { Provider } from 'react-redux'
+import store from './Store/store'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <CookiesProvider>
 <BrowserRouter>
+<Provider store={store}>
 <App />
+
+</Provider>
 </BrowserRouter>
   </CookiesProvider>
   </StrictMode>,
