@@ -100,7 +100,7 @@
     border-top-left-radius: 25px;
     border-bottom-right-radius: 35px;
     min-height:300px;
-    background-color: rgb(128, 128, 126);
+    background-image: linear-gradient(to bottom,#c8e69e,#f5ace9);
   }
   .login-style button:hover {
     background-color: rgb(160, 222, 227);
@@ -134,7 +134,10 @@
     width:100% ;
     height:303px
   }
-
+.navbar{
+  background: linear-gradient(to right, #0059a9 10%, #30a54c 90% );
+  /* background-image: linear-gradient(180deg, #3c6be0 ,#e7b9b9 90%); */
+}
 
   
 
@@ -162,6 +165,9 @@
 
     }
 
+    .navbar{
+      background-image: linear-gradient(180deg, #91e99a ,#b953e5 90%);
+    }
   
 
   }

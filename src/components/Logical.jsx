@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './logical.css'
 
 const Logical = () => {
 
@@ -15,7 +16,7 @@ const Logical = () => {
  function themeChange(e){
         
   if(e.target.checked){
-      setTheme('bg-dark text-white');
+      setTheme('btnChecked');
 
       setBtnColor('btn btn-info fw-bold text-white')
       setSpanColor('bg-white text-dark p-2 fw-bold rounded')

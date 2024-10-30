@@ -34,7 +34,7 @@ function handleRemoveClick(item){           //deleting item from cart
  var flag= window.confirm('Are u sure to delete?')
   if(flag){
     dispatch(removeFromCart(item));
-    alert('Item removed..');
+    // alert('Item removed..');
   }
 
  }
@@ -48,7 +48,7 @@ function handleRemoveClick(item){           //deleting item from cart
    return total;
  }
  else{
-  return `${total +40} (40Rs Delivery Charge below  Rs.500)`;
+  return `${total +40} (+40Rs Delivery Charge below Rs.500)`;
 
  }
 }
@@ -108,8 +108,8 @@ function handleRemoveClick(item){           //deleting item from cart
   return (
     <div className='container-fluid'>
       <div className="row">
-        <div className=' bg-info p-3 d-flex justify-content-around'>
-      <h2 className=' bg-info  text-danger'><span className='bi bi-cart4'></span> Shopping!!!!!!! </h2>
+        <div className=' bg-warning bg-opacity-25 shadow-sm p-3 d-flex justify-content-around'>
+      <h2 className='  rounded  text-danger'><span className='bi bi-cart4'></span> Shopping!!!!!!! </h2>
       <button data-bs-target='#cart' data-bs-toggle='modal'  className='btn btn-warning  text-light fw-bold'>[<span>{cartCount}</span>] Items in Cart</button>
       <div className='modal fade' id="cart">
               <div className='modal-dialog '>
@@ -131,7 +131,7 @@ function handleRemoveClick(item){           //deleting item from cart
                   {
                      cartItems.map(item=><tr key={item.id}>
                          <td width='250'>{item.title}</td>
-                         <td >{item.price}</td>
+                         <td >&#8377;{item.price}</td>
                          <td>
                           <img src={item.image} width='100' height='100'/>
                          </td>

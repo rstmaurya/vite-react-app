@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Promises</title>
+</head>
+<body>
+ <button id="myBtn">Button</button>
+
+
+
+ <script>
+ let myPromise=new Promise((res,rej)=>{
+  res();
+  rej()
+  
+ })
+ document.getElementById('myBtn').addEventListener('click',()=>{
+  // console.log(Promise.resolve('hello'))
+  myPromise.then((value)=>{
+   console.log('resolve')
+  })
+ })
+
+ </script>
+ 
+</body>
+</html>

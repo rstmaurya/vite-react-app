@@ -88,9 +88,9 @@ function App() {
 
         
 
-   <nav className="navbar  navbar-expand-md navbar-light bg-light shadow  z-3  position-sticky top-0">
+   <nav className="navbar  navbar-expand-md navbar-light  shadow  z-3  position-sticky top-0">
   
-  <div className="container-fluid bg-primary bg-opacity-50  p-2 ">
+  <div className="container-fluid  ">
   <NavLink
             className={({ isActive }) =>
               isActive ? "btn btn-success fw-bold m-2" : "btn btn-warning fw-bold m-2"
@@ -105,6 +105,14 @@ function App() {
     </button>
 
     <div className="collapse navbar-collapse" id="navbarNav">
+      <div className="row">
+        <div className="col-10">
+
+        </div>
+        <div className="col-2">
+          
+        </div>
+      </div>
       <ul className="navbar-nav ">
         <li className="nav-item me-2">
         <NavLink
@@ -143,8 +151,11 @@ function App() {
             Contact
           </NavLink> </li>
       </ul>
+
+ 
     </div>
-    <button className=" border border-none">{cookies['user-id']?<span onClick={handleLogOut} className='fw-bold btn btn-danger w-100 bi bi-power'>LogOut</span>:<Link to='/' className='fw-bold btn btn-light bi bi-person-fill'>Login</Link>}</button>
+    <button className=" border ms-2 border-none">{cookies['user-id']?<span onClick={handleLogOut} className='fw-bold btn btn-danger w-100 bi bi-power'>LogOut</span>:<Link to='/' className='fw-bold btn btn-light bi bi-person-fill'>Login</Link>}</button>
+
   </div>
 </nav>
 
@@ -166,7 +177,7 @@ function App() {
             }
           />
         </Routes>
-        <Footer/>
+        <Footer />
     </>
   );
 }

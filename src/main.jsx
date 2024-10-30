@@ -20,6 +20,7 @@ import Calculator from './Calculator/Calculator.jsx'
 import RunningEffects from './lazy-image/RunningEffects.jsx'
 import { Provider } from 'react-redux'
 import store from './Store/store'
+import UseCallback from './Context-demo/UseCallback.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

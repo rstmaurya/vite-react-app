@@ -3,7 +3,7 @@ import Counter from './CountingEffect'
 
 const Footer = () => {
   return (
-    <div>
+    <div >
       <section className="bg-section text-white mt-2">
       <div className="container mt-5">
         <div className="row">
