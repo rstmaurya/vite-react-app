@@ -1,4 +1,5 @@
 .btnChecked{
- background-image: linear-gradient(to top, #eb47eb, #75c0c0);
- color: white;
+ background-image: linear-gradient(to top, #b5a2b5, #13b1ea);
+ /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+
 }

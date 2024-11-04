@@ -16,7 +16,7 @@ const Logical = () => {
  function themeChange(e){
         
   if(e.target.checked){
-      setTheme('btnChecked');
+      setTheme('btnChecked');  //external css class from logical.css
 
       setBtnColor('btn btn-info fw-bold text-white')
       setSpanColor('bg-white text-dark p-2 fw-bold rounded')
@@ -81,7 +81,7 @@ const Logical = () => {
         </div>
        </div>
             <div className='d-flex mt-4  justify-content-between'>
-              <div className='h4'>Classic Utility Jacket</div>
+              <div className='h3'>Classic Utility Jacket</div>
               <div className='h4 text-secondary me-5'>$100.00</div>
             </div>
             <p className='h6 text-opacity-75 text-warning  mb-4'>In stock</p>

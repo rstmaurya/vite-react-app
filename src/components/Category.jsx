@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import store from '../Store/store'
 import { addToCart, removeFromCart } from '../Slicer/cart-slicer'
 
 const Category = () => {
@@ -21,7 +22,7 @@ const Category = () => {
 //  getting state from the store
 
  const cartItems=useSelector((state)=>state.store.cartItems)
- const cartCount = useSelector((state) => state.store.cartCount);
+ const cartCount = useSelector((state) =>state.store.cartCount);
 
  function handleAddClick(product){          //Adding item in cart
   dispatch(addToCart(product))
@@ -58,7 +59,7 @@ function handleRemoveClick(item){           //deleting item from cart
     setData(res.data)
     setOriginalData(res.data)
    })
- },[])
+ },[cartCount])
 
 
 
@@ -129,7 +130,7 @@ function handleRemoveClick(item){           //deleting item from cart
                 </thead>
                 <tbody>
                   {
-                     cartItems.map(item=><tr key={item.id}>
+                     cartItems?.map(item=><tr key={item.id}>
                          <td width='250'>{item.title}</td>
                          <td >&#8377;{item.price}</td>
                          <td>
